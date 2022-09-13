@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/noonnoppi/static/css/main.31d6cfe0.css",
+    "main.js": "/noonnoppi/static/js/main.77b0218a.js",
+    "index.html": "/noonnoppi/index.html",
+    "main.77b0218a.js.map": "/noonnoppi/static/js/main.77b0218a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.77b0218a.js"
+  ]
+}
