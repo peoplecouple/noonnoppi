@@ -1,0 +1,291 @@
+:root {
+  --red: #ed1c24;
+  --blue: #0080ff;
+  --orange: #ff7f00;
+  --green: #008000;
+  --olymp: #b7976b;
+  --white: #fff;
+  --gray: #ddd;
+  --dg: #444444;
+  --lg: #f7f7f7;
+  --fg: #eeeeee;
+  --fi: #888888;
+  --ft: #777777;
+}
+
+* {
+  outline: 1px solid pink;
+}
+
+.Wrap {
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.Header_top {
+  border-bottom: 1px solid var(--lg);
+  line-height: 80px;
+}
+
+.Header_top .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header_top .container>div {
+  line-height: 1;
+}
+
+.Header_top i {
+  font-size: 20px;
+  padding: 5px;
+  color: var(--white);
+  margin: 0 0 5px 0;
+}
+
+.Header_top p {
+  font-size: 13px;
+}
+
+.Header_top h1 {
+  font-size: 0;
+}
+
+.Header_top h1 a {
+  display: block;
+}
+
+.Header_top h1 img {
+  width: 100px;
+}
+
+.Header_top .left_icons {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  width: 15%;
+}
+
+.Header_top .right_icons {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+  width: 15%;
+}
+
+.Header_top .left_icons .left i {
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.Header_top .left_icons .right i {
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.Header_top .left_icons a~a::before {
+  position: absolute;
+  bottom: 22%;
+  right: 56%;
+  content: "";
+  width: 1px;
+  height: 8px;
+  background: var(--gray);
+}
+
+.Header_top .right_icons a~a::before {
+  position: absolute;
+  bottom: 22%;
+  right: 30%;
+  content: "";
+  width: 1px;
+  height: 8px;
+  background: var(--gray);
+}
+
+.Header_top .right_icons .left i {
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.Header_top .right_icons .right i {
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.Header_bottom {
+  line-height: 60px;
+  border-bottom: 1px solid var(--lg);
+}
+
+.Header_bottom .Gnb {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.Header_bottom .Gnb li:last-child {
+  color: var(--olymp);
+}
+
+.Header_bottom .Gnb li:last-child:before {
+  content: "";
+  width: 30px;
+  height: 24px;
+  background: url(../public/assets/images/olympiad.png);
+  display: inline-block;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+.MainVisual {
+  position: relative;
+}
+
+.MainVisual figure {
+  position: relative;
+  height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.MainVisual .itm01 {
+  background-image: url(../public/assets/images/main01.jpg);
+}
+
+.MainVisual .itm02 {
+  background-image: url(../public/assets/images/main02.jpg);
+}
+
+.MainVisual .itm03 {
+  background-image: url(../public/assets/images/main03_2.jpg);
+}
+
+.MainVisual .container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MainVisual figure h2 {
+  font-size: 51px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.MainVisual figure.on h2 {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s;
+}
+
+.MainVisual figure p {
+  font-size: 31px;
+  margin: 0 0 45px 0;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.MainVisual figure.on p {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s 0.5s;
+}
+
+.MainVisual figure a {
+  font-size: 17px;
+  display: inline-block;
+  padding: 11px 24px 13px 24px;
+  border-radius: 25px;
+  background: var(--dg);
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.MainVisual figure.on a {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s 1s;
+}
+
+.MainVisual .slideTab {
+  position: absolute;
+  bottom: 19%;
+  left: 19%;
+  display: flex;
+  gap: 60px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.MainVisual .slideTab li {
+  position: relative;
+}
+
+.MainVisual .slideTab li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+}
+
+.MainVisual .slideTab li::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.5)
+}
+
+.MainVisual .slideTab li.on::after {
+  width: 100px;
+  transition: 3s;
+}
+
+.MainVisual .control i {
+  position: absolute;
+  bottom: 18%;
+  font-size: 25px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.MainVisual .control i:first-child {
+  left: 40%;
+}
+
+.MainVisual .control i:last-child {
+  left: 41%;
+}
+
+.SideMenu {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  width: 250px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.64);
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
