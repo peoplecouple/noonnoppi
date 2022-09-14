@@ -21,6 +21,7 @@ const MainVisual = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    speed: 1000,
     afterChange: index => {
       setIDX(index)
     }
@@ -53,7 +54,7 @@ const MainVisual = () => {
           })
         }
       </ul>
- 
+
       <div className="control">
         <i className="xi-pause" onClick={() => { mainSlide.current.slickPause() }}></i>
         <i className="xi-play" onClick={() => { mainSlide.current.slickPlay() }}></i>
