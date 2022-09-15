@@ -2,8 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow } from "swiper";
-// import { useSwiper } from 'swiper/react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SLIDE = [
   { id: 1, title: '눈높이 학습관', des: '언제 어디서나 간편하게 스마트폰과 PC를 통해 듣기 학습과 동영상 학습을 할 수 있는 온라인 학습관 입니다.' },
@@ -20,31 +19,32 @@ const TAB = [
   { id: 4 },
   { id: 5 },
 ]
+
 const Content = () => {
-  // const swiper = useSwiper();
+
   const [IDX, setIDX] = useState()
-  const [SC, setSC] = useState()
-  const CS = useRef(null)
+  const [SWIPER, setSWIPER] = useState()
+
   useEffect(() => {
     setIDX(0)
-    setSC(CS.current)
+
   }, [])
-  console.log(CS.current)
+
   return (
     <section className="Content">
       <p>눈높이 회원을 위한</p>
       <h2>다양한 콘텐츠</h2>
       <Swiper
-        ref={CS}
         className='outer'
         slidesPerView={3}
         loop={true}
         effect={"coverflow"}
+        grabCursor={true}
         centeredSlides={true}
         coverflowEffect={
           {
             rotate: 0,
-            stretch: 153.5,
+            stretch: 154,
             depth: 90,
             modifier: 1,
             slideShadows: true,
@@ -52,22 +52,23 @@ const Content = () => {
         }
         modules={[EffectCoverflow]}
         // onSlideChange={(e) => console.log(e)}
-        // onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={(swiper) => setSWIPER(swiper)}
         onRealIndexChange={(e) => setIDX(e.realIndex)}
       >
         {
           SLIDE.map((el, idx) => {
             return (
               <SwiperSlide className='page' key={el.id}>
-                <div className="box" >
+                <figure className={el.id === 2 ? "on" : ""}>
                   <div>
                     <strong>{el.title}</strong>
                     <a href="#!">바로가기</a>
                   </div>
                   <div><img src={process.env.PUBLIC_URL + "/assets/images/content" + el.id + ".png"} alt="" /></div>
                   <p>{el.des}</p>
-                </div>
+                </figure>
               </SwiperSlide>
+
             )
           })
         }
@@ -77,7 +78,8 @@ const Content = () => {
           {
             TAB.map((el, idx) => {
               return (
-                <li key={el.id} onClick={() => SC.slideTo(idx)}></li>
+                <li key={el.id} onClick={() => SWIPER.slideTo(idx + 3)} className={idx === IDX ? "on" : ""}></li>
+                // https://velog.io/@moonelysian/Swiperjs-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%99%B8%EB%B6%80%EC%97%90%EC%84%9C-Swiper-control-%ED%95%98%EB%8A%94-%EB%B2%95 참고 ref를 써서 하면 슬라이드에서 외부를 바꾸는건 되지만 외부에서 슬라이드 바꾸게하는건 안됨
               )
             })
           }

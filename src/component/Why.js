@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 const CONTENT = [
   { id: 1, desc: '눈높이 전문 교사 수', num: <p><span>11,000</span>명</p> },
   { id: 2, desc: '브랜드 파워 24년 연속', num: <p><span>1위</span></p> },
@@ -5,6 +7,14 @@ const CONTENT = [
 ]
 
 const Why = () => {
+  const DATA = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let sct = window.scrollY
+      console.log(sct)
+      sct > 380 ? DATA.current.classList.add('on') : DATA.current.classList.remove('on')
+    })
+  }, [])
   return (
     <section className="Why">
       <div className="container">
@@ -14,7 +24,7 @@ const Why = () => {
         </h2>
         <p>*1200만(실제 누적 눈높이 회원 수 2022년 9월 기준)</p>
         <p className="last">*1위 (브랜드파워 초등 교육 부분 24년 연속, 유아 교육 부분 13년 연속) </p>
-        <div className="box">
+        <div ref={DATA} className="box">
           {
             CONTENT.map((el, idx) => {
               return (

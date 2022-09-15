@@ -1,11 +1,11 @@
 const Header = () => {
   const MENU = [
-    { id: 1, menu: '무료체험신청', link: '/' },
-    { id: 2, menu: '눈높이소개', link: '/' },
-    { id: 3, menu: '콘텐츠소개', link: '/' },
-    { id: 4, menu: '학습후기', link: '/' },
-    { id: 5, menu: '이벤트', link: '/' },
-    { id: 6, menu: '눈높이올림피아드', link: '/' },
+    { id: 1, menu: '무료체험신청', link: '#!' },
+    { id: 2, menu: '눈높이소개', link: '#!' },
+    { id: 3, menu: '콘텐츠소개', link: '#!' },
+    { id: 4, menu: '학습후기', link: '#!' },
+    { id: 5, menu: '이벤트', link: '#!' },
+    { id: 6, menu: '눈높이올림피아드', link: '#!' },
   ]
 
   return (
