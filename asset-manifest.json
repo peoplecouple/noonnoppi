@@ -1,12 +1,19 @@
 {
   "files": {
-    "main.css": "/noonnoppi/static/css/main.31d6cfe0.css",
-    "main.js": "/noonnoppi/static/js/main.77b0218a.js",
+    "main.css": "/noonnoppi/static/css/main.234ee0c8.css",
+    "main.js": "/noonnoppi/static/js/main.606f2468.js",
+    "static/media/main03_2.jpg": "/noonnoppi/static/media/main03_2.f3d0ed46fba43b9270c9.jpg",
+    "static/media/main01.jpg": "/noonnoppi/static/media/main01.72bcd10997bfb6bde374.jpg",
+    "static/media/main02.jpg": "/noonnoppi/static/media/main02.a70d1298665fadddc80f.jpg",
+    "static/media/content_bg.jpg": "/noonnoppi/static/media/content_bg.7a928289b1f806854ce2.jpg",
+    "static/media/reiview_bg.jpg": "/noonnoppi/static/media/reiview_bg.0cc9fad2427630be0225.jpg",
+    "static/media/bottom_banner_bg.jpg": "/noonnoppi/static/media/bottom_banner_bg.eccb0d974c255aab8667.jpg",
     "index.html": "/noonnoppi/index.html",
-    "main.77b0218a.js.map": "/noonnoppi/static/js/main.77b0218a.js.map"
+    "main.234ee0c8.css.map": "/noonnoppi/static/css/main.234ee0c8.css.map",
+    "main.606f2468.js.map": "/noonnoppi/static/js/main.606f2468.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.77b0218a.js"
+    "static/css/main.234ee0c8.css",
+    "static/js/main.606f2468.js"
   ]
 }
