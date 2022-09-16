@@ -6,7 +6,7 @@ const BottomBanner = () => {
     window.addEventListener("scroll", () => {
       let sct = window.scrollY
       console.log(sct)
-      sct > 2700 ? TEXT.current.classList.add('on') : TEXT.current.classList.remove('on')
+      sct > 2600 ? TEXT.current.classList.add('on') : TEXT.current.classList.remove('on')
     })
   }, [])
 

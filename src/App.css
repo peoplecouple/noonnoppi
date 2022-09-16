@@ -666,7 +666,7 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px dotted transparent;
+  border: 5px solid transparent;
   transition: 0.5s;
 }
 
@@ -677,7 +677,6 @@
 
 .Review .box div:hover {
   transform: scale(1.3);
-
 }
 
 .Review .box div.on {
@@ -691,14 +690,14 @@
 .Review .box div:nth-child(1) {
   width: 150px;
   height: 150px;
-  top: 26%;
+  top: 30%;
   left: 0;
 }
 
 .Review .box div:nth-child(2) {
   width: 175px;
   height: 175px;
-  top: 17%;
+  top: 22%;
   left: 20%;
 }
 
